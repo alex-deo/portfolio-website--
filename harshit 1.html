@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harshit - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.min.js"></script>
+    <!-- Heroicons for social media icons -->
+    <script src="https://unpkg.com/@heroicons/vue@2.0.13/dist/24/outline.js"></script>
+    <style>
+        .typed-cursor {
+            font-size: 1.25rem; /* Smaller cursor for better mobile fit */
+            color: #4B5563;
+        }
+        /* Smooth transition for mobile menu */
+        #mobile-menu {
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+        /* Ensure inputs have consistent height */
+        input, textarea {
+            transition: all 0.2s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800 scroll-smooth antialiased">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md fixed w-full z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-lg sm:text-xl font-bold tracking-tight">Harshit</span>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-4 lg:space-x-6">
+                    <a href="#home" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm lg:text-base font-medium transition duration-200">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm lg:text-base font-medium transition duration-200">About</a>
+                    <a href="#projects" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm lg:text-base font-medium transition duration-200">Projects</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm lg:text-base font-medium transition duration-200">Contact</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none" aria-label="Toggle menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden overflow-hidden max-h-0 opacity-0">
+            <div class="px-4 pt-2 pb-4 space-y-2 bg-white shadow-md">
+                <a href="#home" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium transition duration-200">Home</a>
+                <a href="#about" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium transition duration-200">About</a>
+                <a href="#projects" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium transition duration-200">Projects</a>
+                <a href="#contact" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium transition duration-200">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-100 via-indigo-100 to-purple-100 pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 text-center">
+            <img src="https://picsum.photos/id/237/150/150" alt="Harshit's Profile" class="w-24 sm:w-32 lg:w-40 h-24 sm:h-32 lg:h-40 rounded-full mx-auto mb-4 border-4 border-white shadow-md object-cover">
+            <h1 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-800 tracking-tight">Harshit</h1>
+            <h2 class="text-lg sm:text-xl lg:text-2xl xl:text-3xl text-gray-600 mt-2">Web Developer</h2>
+            <p class="text-base sm:text-lg lg:text-xl text-gray-500 mt-4 max-w-md sm:max-w-lg lg:max-w-2xl mx-auto">
+                <span id="typed" class="font-semibold"></span>
+            </p>
+            <a href="assets/resume.pdf" download class="mt-6 inline-block bg-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500">Download Resume</a>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-12 sm:py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 lg:mb-12">About Me</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                <!-- Bio -->
+                <div class="bg-white p-4 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <h3 class="text-lg sm:text-xl font-semibold mb-4">My Story</h3>
+                    <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+                        I'm Harshit, a passionate web developer with a background in computer science. I thrive on creating responsive, user-friendly websites that solve real-world problems. My interests include exploring cutting-edge technologies, contributing to open-source projects, and mentoring aspiring developers. My goal is to build innovative web solutions that leave a lasting impact.
+                    </p>
+                </div>
+                <!-- Skills -->
+                <div class="bg-white p-4 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <h3 class="text-lg sm:text-xl font-semibold mb-4">Skills</h3>
+                    <ul class="grid grid-cols-2 gap-2 sm:gap-3 text-gray-600 text-sm sm:text-base">
+                        <li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>HTML</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>CSS</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>JavaScript</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>React</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>Tailwind CSS</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>Git</li>
+                    </ul>
+                </div>
+                <!-- Timeline -->
+                <div class="md:col-span-2 bg-white p-4 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 mt-6 lg:mt-8">
+                    <h3 class="text-lg sm:text-xl font-semibold mb-4">Education & Experience</h3>
+                    <div class="space-y-4 sm:space-y-6">
+                        <div>
+                            <h4 class="text-base sm:text-lg font-medium">BSc Computer Science - XYZ University</h4>
+                            <p class="text-gray-500 text-sm">2018 - 2022</p>
+                            <p class="text-gray-600 text-sm sm:text-base">Graduated with honors, specializing in web development and software engineering.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-base sm:text-lg font-medium">Junior Web Developer - TechCorp</h4>
+                            <p class="text-gray-500 text-sm">2022 - Present</p>
+                            <p class="text-gray-600 text-sm sm:text-base">Developed and maintained responsive web applications using modern frameworks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-12 sm:py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 lg:mb-12">Projects</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Project 1 -->
+                <div class="bg-gray-100 p-4 sm:p-6 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition duration-300">
+                    <img src="https://picsum.photos/id/1015/300/200" alt="E-Commerce Platform" class="w-full h-40 sm:h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-lg sm:text-xl font-semibold mb-2">E-Commerce Platform</h3>
+                    <p class="text-gray-600 text-sm sm:text-base mb-4">A fully functional e-commerce website with product listings, cart, and checkout features. Built with HTML, CSS, and JavaScript.</p>
+                    <a href="https://github.com/harshit/ecommerce" class="text-blue-600 hover:underline text-sm sm:text-base">GitHub Repo</a>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-gray-100 p-4 sm:p-6 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition duration-300">
+                    <img src="https://picsum.photos/id/1018/300/200" alt="Task Manager App" class="w-full h-40 sm:h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-lg sm:text-xl font-semibold mb-2">Task Manager App</h3>
+                    <p class="text-gray-600 text-sm sm:text-base mb-4">A productivity app for managing tasks with drag-and-drop functionality. Built with React and Tailwind CSS.</p>
+                    <a href="https://github.com/harshit/taskmanager" class="text-blue-600 hover:underline text-sm sm:text-base">GitHub Repo</a>
+                </div>
+                <!-- Project 3 -->
+                <div class="bg-gray-100 p-4 sm:p-6 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition duration-300">
+                    <img src="https://picsum.photos/id/1025/300/200" alt="Portfolio Website" class="w-full h-40 sm:h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-lg sm:text-xl font-semibold mb-2">Portfolio Website</h3>
+                    <p class="text-gray-600 text-sm sm:text-base mb-4">A personal portfolio to showcase my work and skills. Built with HTML and Tailwind CSS.</p>
+                    <a href="https://github.com/harshit/portfolio" class="text-blue-600 hover:underline text-sm sm:text-base">GitHub Repo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 sm:py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 lg:mb-12">Contact Me</h2>
+            <div class="max-w-lg mx-auto bg-white p-4 sm:p-6 rounded-lg shadow-md">
+                <!-- Contact Form -->
+                <form id="contact-form" class="space-y-4" onsubmit="return false;">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                        <input type="text" id="name" name="name" required class="mt-1 block w-full p-2 sm:p-3 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 transition duration-200" placeholder="Your Name">
+                        <p class="text-red-500 text-xs mt-1 hidden" id="name-error">Please enter your name.</p>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                        <input type="email" id="email" name="email" required class="mt-1 block w-full p-2 sm:p-3 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 transition duration-200" placeholder="Your Email">
+                        <p class="text-red-500 text-xs mt-1 hidden" id="email-error">Please enter a valid email.</p>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                        <textarea id="message" name="message" rows="4" required class="mt-1 block w-full p-2 sm:p-3 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 transition duration-200" placeholder="Your Message"></textarea>
+                        <p class="text-red-500 text-xs mt-1 hidden" id="message-error">Please enter a message.</p>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full bg-blue-600 text-white px-4 py-2 sm:py-3 rounded-md hover:bg-blue-700 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500">Submit</button>
+                    </div>
+                    <p id="form-message" class="text-sm text-green-600 hidden text-center">Thank you! Your message has been received.</p>
+                </form>
+                <!-- Social Media Icons -->
+                <div class="mt-6 flex justify-center space-x-4 sm:space-x-6">
+                    <a href="https://linkedin.com/in/harshit" class="text-gray-600 hover:text-blue-600 transition duration-200" aria-label="LinkedIn">
+                        <svg class="w-5 sm:w-6 h-5 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8a6 6 0 00-12 0v7a6 6 0 0012 0v-7zm-4-4v12m-8 0V5m16 7v7m0-7V5"></path></svg>
+                    </a>
+                    <a href="https://github.com/harshit" class="text-gray-600 hover:text-blue-600 transition duration-200" aria-label="GitHub">
+                        <svg class="w-5 sm:w-6 h-5 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.66-.22.66-.49v-1.72c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.12-1.47-1.12-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.26.1-2.63 0 0 .84-.27 2.75 1.02A9.58 9.58 0 0112 6.8c.85 0 1.71.11 2.52.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.38.1 2.63.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.93.68 1.87v2.77c0 .27.16.58.67.49A10 10 0 0022 12c0-5.52-4.48-10-10-10z"></path></svg>
+                    </a>
+                    <a href="https://twitter.com/harshit" class="text-gray-600 hover:text-blue-600 transition duration-200" aria-label="Twitter">
+                        <svg class="w-5 sm:w-6 h-5 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 text-center">
+            <p class="text-sm sm:text-base">© 2025 Harshit. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Typed.js for dynamic typing effect
+        var typed = new Typed('#typed', {
+            strings: ["Building the web, one line at a time.", "Crafting user-friendly experiences.", "Turning ideas into reality."],
+            typeSpeed: 50,
+            backSpeed: 25,
+            backDelay: 1500,
+            loop: true
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('max-h-0');
+            mobileMenu.classList.toggle('max-h-96');
+            mobileMenu.classList.toggle('opacity-0');
+            mobileMenu.classList.toggle('opacity-100');
+        });
+
+        // Form validation and feedback
+        const form = document.getElementById('contact-form');
+        const formMessage = document.getElementById('form-message');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const messageInput = document.getElementById('message');
+        const nameError = document.getElementById('name-error');
+        const emailError = document.getElementById('email-error');
+        const messageError = document.getElementById('message-error');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let isValid = true;
+
+            // Reset error messages
+            nameError.classList.add('hidden');
+            emailError.classList.add('hidden');
+            messageError.classList.add('hidden');
+
+            // Validate inputs
+            if (!nameInput.value.trim()) {
+                nameError.classList.remove('hidden');
+                isValid = false;
+            }
+            if (!emailInput.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+                emailError.classList.remove('hidden');
+                isValid = false;
+            }
+            if (!messageInput.value.trim()) {
+                messageError.classList.remove('hidden');
+                isValid = false;
+            }
+
+            if (isValid) {
+                formMessage.classList.remove('hidden');
+                form.reset();
+                setTimeout(() => formMessage.classList.add('hidden'), 3000);
+            }
+        });
+    </script>
+</body>
+</html>
